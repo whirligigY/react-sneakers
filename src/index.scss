@@ -1,18 +1,83 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #e7f6ff;
+#root {
+  background: #e7f6ff;
+  padding: 5rem;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+button {
+  border: none;
 }
 
 .wrapper {
-  background: #fff;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
-  border-radius: 20px;
   max-width: 1080px;
   margin: 0 auto;
-  margin: 50px auto;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+header {
+  border-bottom: 1px solid #eaeaea;
+  line-height: 24px;
+  h3 {
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #9d9d9d;
+  }
+  ul {
+    list-style-type: none;
+  }
+  span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5c5c5c;
+  }
+}
+.content {
+  .card-container {
+    gap: 40px;
+  }
+  .card {
+    min-width: 210px;
+    background: #fff;
+    border: 1px solid #f3f3f3;
+    border-radius: 40px;
+    padding: 20px 30px 30px;
+    .card-text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000;
+      text-align: center;
+    }
+    .card-subtext {
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 13px;
+      text-transform: uppercase;
+      color: #bdbdbd;
+    }
+    .btn-add {
+      width: 32px;
+      height: 32px;
+      background: #fff;
+      border: 1px solid #f2f2f2;
+      box-sizing: border-box;
+      border-radius: 8px;
+    }
+    .btn-add:hover {
+      border-color: #bdbdbd;
+    }
+  }
 }
