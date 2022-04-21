@@ -21,6 +21,9 @@ function App() {
             <span>1 005$</span>
           </li>
           <li>
+            <img src="/img/like.svg" width="20" height="20" />
+          </li>
+          <li>
             <img src="/img/user.svg" width="20" height="20" />
           </li>
         </ul>
