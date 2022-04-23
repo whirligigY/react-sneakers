@@ -1,0 +1,117 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.cu-p {
+  cursor: pointer;
+}
+
+.drawer {
+  position: absolute;
+  width: 420px;
+  height: 100%;
+  right: 0;
+  padding: 30px;
+  background: #ffffff;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    margin: 0;
+
+    img {
+      cursor: pointer;
+      transform: rotate(45deg);
+    }
+  }
+  .cartList {
+    gap: 20px;
+    flex: 1;
+    overflow: auto;
+    margin-bottom: 30px;
+  }
+  .greenBtn {
+    width: 100%;
+    min-height: 55px;
+    height: 55px;
+    background: #9dd558;
+    border-radius: 18px;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+    position: relative;
+
+    img {
+      position: absolute;
+      left: 265px;
+      top: 21px;
+      transform: translateX(0);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &:hover {
+      background: lighten(#9dd558, 5%);
+      img {
+        transform: translateX(5px);
+      }
+    }
+
+    &:active {
+      background: darken(#9dd558, 5%);
+    }
+  }
+  .cartTotalBlock {
+    ul {
+      display: block;
+      margin-bottom: 30px !important;
+      li {
+        div {
+          position: relative;
+          top: -3px;
+          height: 1px;
+          width: 1px;
+          border-top: 1px dashed #dfdfdf;
+          flex: 1;
+        }
+      }
+    }
+  }
+
+  .cartItem {
+    background: #ffffff;
+    border: 1px solid #f3f3f3;
+    box-sizing: border-box;
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 120px;
+    padding: 20px;
+  }
+  .cartItemText {
+    margin-left: 20px;
+    margin-right: 12px;
+  }
+  .cardText {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    text-align: center;
+  }
+  .removeBtn {
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

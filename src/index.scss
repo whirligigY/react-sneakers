@@ -2,7 +2,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e7f6ff;
+  background: #e7f6ff !important;
 }
 
 * {
@@ -30,140 +30,14 @@ button {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
 }
 
-header {
-  border-bottom: 1px solid #eaeaea;
-  line-height: 24px;
-  h3 {
-    font-weight: 700;
-    font-size: 20px;
-    text-transform: uppercase;
-  }
-  p {
-    color: #9d9d9d;
-  }
-  ul {
-    list-style-type: none;
-  }
-  span {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    color: #5c5c5c;
-  }
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
-.drawer {
-  position: absolute;
-  width: 420px;
-  height: 100%;
-  right: 0;
-  padding: 30px;
-  background: #ffffff;
-  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
-
-  h2 {
-    margin: 0;
-
-    img {
-      cursor: pointer;
-      transform: rotate(45deg);
-    }
-  }
-  .cartList {
-    gap: 20px;
-    flex: 1;
-    overflow: auto;
-    margin-bottom: 30px;
-  }
-  .greenBtn {
-    width: 100%;
-    min-height: 55px;
-    height: 55px;
-    background: #9dd558;
-    border-radius: 18px;
-    border: none;
-    color: #fff;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
-    cursor: pointer;
-    transition: background 0.2s ease-in-out;
-    position: relative;
-
-    img {
-      position: absolute;
-      left: 265px;
-      top: 21px;
-      transform: translateX(0);
-      transition: transform 0.2s ease-in-out;
-    }
-
-    &:hover {
-      background: lighten(#9dd558, 5%);
-      img {
-        transform: translateX(5px);
-      }
-    }
-
-    &:active {
-      background: darken(#9dd558, 5%);
-    }
-  }
-  .cartTotalBlock {
-    ul {
-      display: block;
-      margin-bottom: 30px !important;
-      li {
-        div {
-          position: relative;
-          top: -3px;
-          height: 1px;
-          width: 1px;
-          border-top: 1px dashed #dfdfdf;
-          flex: 1;
-        }
-      }
-    }
-  }
-
-  .cartItem {
-    background: #ffffff;
-    border: 1px solid #f3f3f3;
-    box-sizing: border-box;
-    border-radius: 20px;
-    overflow: hidden;
-    min-height: 120px;
-    padding: 20px;
-  }
-  .cartItemText {
-    margin-left: 20px;
-    margin-right: 12px;
-  }
-  .removeBtn {
-    opacity: 0.5;
-    transition: opacity 0.2s ease-in-out;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
 .content {
   .search-block {
     padding: 0 15px;
     height: fit-content;
     border: 1px solid #f3f3f3;
     border-radius: 10px;
+    position: relative;
+
     input {
       border: none;
       padding: 13px;
@@ -176,55 +50,14 @@ header {
     margin-top: 40px;
     gap: 40px;
   }
-
-  .card {
-    min-width: 210px;
-    background: #fff;
-    border: 1px solid #f3f3f3;
-    border-radius: 20px;
-    padding: 20px 30px 30px;
-    position: relative;
-    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
-    cursor: pointer;
-
-    &:hover {
-      box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.06);
-      transform: translateY(-5px);
-    }
-    .card-like {
-      position: absolute;
-      top: 30px;
-      left: 30px;
-      cursor: pointer;
-    }
-
-    .card-text {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 17px;
-      color: #000000;
-      text-align: center;
-    }
-    .card-subtext {
-      font-weight: 500;
-      font-size: 11px;
-      line-height: 13px;
-      text-transform: uppercase;
-      color: #bdbdbd;
-    }
-    .card-info {
-      width: 100%;
-    }
-    .btn-add {
-      width: 32px;
-      height: 32px;
-      background: #fff;
-      border: 1px solid #f2f2f2;
-      box-sizing: border-box;
-      border-radius: 8px;
-    }
-    .btn-add:hover {
-      border-color: #bdbdbd;
-    }
+}
+.search-remover {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  transform: rotate(45deg);
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
   }
 }

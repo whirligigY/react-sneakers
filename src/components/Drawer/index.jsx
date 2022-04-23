@@ -1,19 +1,51 @@
-const Drawer = () => {
+import styles from './Drawer.module.scss';
+
+const Drawer = ({ cartItems, closeShoppingCart, onRemove }) => {
+  console.log({ cartItems });
   return (
-    <div className="overlay">
-      <div className="drawer d-flex flex-column">
+    <div className={styles.overlay}>
+      <div className={`${styles.drawer} d-flex flex-column`}>
         <h2 className="d-flex justify-content-between align-items-center">
           Shopping cart
           <img
-            className="removeBtn"
+            className={styles.removeBtn}
             src="/img/plus.svg"
             alt="sneakers"
             width="15"
             height="15"
+            onClick={closeShoppingCart}
           />
         </h2>
-        <div className="cartList d-flex flex-column mt-4">
-          <div className="cartItem d-flex align-items-center">
+        <div className={`${styles.cartList} d-flex flex-column mt-4`}>
+          {cartItems.length > 0 &&
+            cartItems.map((item, index) => {
+              return (
+                <div
+                  key={`crt_${index}`}
+                  className={`${styles.cartItem} d-flex align-items-center`}
+                >
+                  <img
+                    src={item.imageUrl}
+                    alt="sneakers"
+                    width="70"
+                    height="70"
+                  />
+                  <div className={`${styles.cartItemText} d-flex flex-column`}>
+                    <p className={`${styles.cardText} mb-2`}>{item.title}</p>
+                    <b>{`${item.price} $`}</b>
+                  </div>
+                  <img
+                    className={styles.removeBtn}
+                    src="/img/btn-remove.svg"
+                    alt="sneakers"
+                    width="32"
+                    height="32"
+                    onClick={() => onRemove(item.id)}
+                  />
+                </div>
+              );
+            })}
+          {/* <div className="cartItem d-flex align-items-center">
             <img
               src="/img/sneakers/1.jpg"
               alt="sneakers"
@@ -50,7 +82,7 @@ const Drawer = () => {
               width="32"
               height="32"
             />
-          </div>
+          </div> */}
         </div>
         <div className="cartTotalBlock">
           <ul>
